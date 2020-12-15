@@ -10,6 +10,9 @@ To do it the right way, we create an SSH key and configure it to the git account
 ### Creating SSH Keys
 You create a new key by running the following command, substituting for your own email address:
 ```
+ cd ~
+ mkdir .ssh
+ cd ~/.ssh
  ssh-keygen -t rsa -b 4096 -C “your_email@example.com”
 ```
 You’ll be prompted to **“Enter file in which to save the key”**. So let’s assume you need to make accounts for a personal SSH key and a work one. You can create as many SSH keys as you like.
