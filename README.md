@@ -62,5 +62,18 @@ Add the following configure for each SSH Key:
         IdentityFile ~/.ssh/rsa_work
 ```
 
+### Test Connection
+Now, this is the final step. Verify your configuration and ssh key connection to confirm everything works smoothly.
+
+To test connection with github run the command
+```
+ssh -T git@github.com
+```
+
+To test connection with bitbucket run the command
+```
+ssh -T git@bitbucket.org 
+```
+
 ### Conclusion
 If you followed along you hopefully now have everything you need to painlessly manage multiple projects hosted across different git accounts (github.com or bitbucket.org).
