@@ -27,7 +27,7 @@ To view all the SSH Keys generated and the one already present in system, go to 
 ```
 You will get below results
 ```
- rsa_personal rsa_personal.pub rsa_work rsa_work.pub
+ rsa_personal rsa_personal.pub rsa_work_1 rsa_work_1.pub rsa_work_2 rsa_work_2.pub
 ```
 
 ### Registering all SSH Keys
@@ -59,7 +59,14 @@ Add the following configure for each SSH Key:
         HostName altssh.bitbucket.org
         Port 443
         User git
-        IdentityFile ~/.ssh/rsa_work
+        IdentityFile ~/.ssh/rsa_work_1
+        
+ #azure account
+ Host azure.com
+        HostName ssh.dev.azure.com
+        Port 443
+        User git
+        IdentityFile ~/.ssh/rsa_work_2
 ```
 
 ### Test Connection
@@ -73,6 +80,11 @@ ssh -T git@github.com
 To test connection with bitbucket run the command
 ```
 ssh -T git@bitbucket.org 
+```
+
+To test connection with azure run the command
+```
+ssh -T git@ssh.dev.azure.com 
 ```
 
 ### Conclusion
