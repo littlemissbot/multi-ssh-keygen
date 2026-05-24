@@ -62,7 +62,7 @@ Add the following configure for each SSH Key:
         IdentityFile ~/.ssh/rsa_work_1
         
  #azure account
- Host azure.com
+ Host ssh.dev.azure.com
         HostName ssh.dev.azure.com
         Port 443
         User git
